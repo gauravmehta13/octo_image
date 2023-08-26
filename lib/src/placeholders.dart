@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_blurhash/flutter_blurhash.dart';
 
 import '../octo_image.dart';
 
@@ -14,12 +13,7 @@ class OctoPlaceholder {
   /// The hash should be made server side. See [blurha.sh](https://blurha.sh/) for more information.
   /// [fit] defaults to [BoxFit.cover].
   static OctoPlaceholderBuilder blurHash(String hash, {BoxFit? fit}) {
-    return (context) => SizedBox.expand(
-          child: Image(
-            image: BlurHashImage(hash),
-            fit: fit ?? BoxFit.cover,
-          ),
-        );
+    return (context) => SizedBox.shrink();
   }
 
   /// Displays a [CircleAvatar] as placeholder
